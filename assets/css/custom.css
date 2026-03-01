@@ -48,11 +48,6 @@ a:focus, .btn:focus, .form-control:focus{
   z-index: 9999;
 }
 
-.navbar-brand{
-  font-weight: 700;
-  color: var(--ink);
-}
-
 .nav-link{
   color: rgba(23,33,43,.82) !important;
   font-weight: 500;
@@ -63,11 +58,6 @@ a:focus, .btn:focus, .form-control:focus{
   color: var(--ink) !important;
 }
 
-.navbar-toggler{
-  border-color: var(--border-strong);
-}
-
-/* navbar CTA only */
 .navbar .btn-primary{
   background: transparent;
   border: 1px solid rgba(23,33,43,.22);
