@@ -1,9 +1,9 @@
 :root {
-  --raw-black: #0a0a0a;
-  --raw-white: #f2f0eb;
-  --raw-mid: #8a8a8a;
-  --raw-low: #4b4b4b;
-  --raw-rule: 1px solid #2a2a2a;
+  --raw-black: #151515;
+  --raw-white: #f5f2eb;
+  --raw-mid: #b3b3b3;
+  --raw-low: #666;
+  --raw-rule: 1px solid #323232;
 }
 
 body.home-page {
