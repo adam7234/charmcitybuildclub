@@ -164,12 +164,13 @@ a:focus, .btn:focus, .form-control:focus{
 }
 
 .site-footer{
-  background: #1b2a2a;
-  color: rgba(255,255,255,.92);
+  background: #f6f3ec;
+  color: var(--ink);
+  border-top: 1px solid var(--border);
 }
 
 .site-footer .text-muted{
-  color: rgba(255,255,255,.68) !important;
+  color: var(--muted) !important;
 }
 
 .footer-title{
@@ -177,19 +178,19 @@ a:focus, .btn:focus, .form-control:focus{
   letter-spacing: .04em;
   text-transform: uppercase;
   font-size: .78rem;
-  color: rgba(255,255,255,.72);
+  color: rgba(23,33,43,.58);
   margin-bottom: .75rem;
 }
 
 .footer-links a,
 .footer-contact{
-  color: rgba(255,255,255,.82);
+  color: rgba(23,33,43,.84);
   text-decoration: none;
 }
 
 .footer-links a:hover,
 .footer-contact:hover{
-  color: #fff;
+  color: var(--ink);
 }
 
 .footer-mark{
@@ -197,18 +198,19 @@ a:focus, .btn:focus, .form-control:focus{
   height: 34px;
   border-radius: 10px;
   object-fit: contain;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
+  background: #fff;
+  border: 1px solid var(--border);
 }
 
 .footer-btn{
   border-radius: 10px;
-  border-color: rgba(255,255,255,.18) !important;
+  border-color: rgba(23,33,43,.16) !important;
+  color: var(--ink) !important;
 }
 
 .footer-btn:hover{
-  background: rgba(255,255,255,.08) !important;
-  border-color: rgba(255,255,255,.28) !important;
+  background: rgba(23,33,43,.04) !important;
+  border-color: rgba(23,33,43,.26) !important;
 }
 
 .content{
