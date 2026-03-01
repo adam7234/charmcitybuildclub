@@ -1,9 +1,10 @@
 :root {
---raw-black: #1b1b1b;
---raw-mid: #bebebe;
---raw-rule: 1px solid #3a3a3a;
+  --raw-black: #1b1b1b;
+  --raw-white: #f5f2eb;
+  --raw-mid: #bebebe;
+  --raw-low: #666666;
+  --raw-rule: 1px solid #3a3a3a;
 }
-
 body.home-page {
   background: var(--raw-black);
   color: var(--raw-white);
