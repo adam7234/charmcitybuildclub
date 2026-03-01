@@ -1,7 +1,7 @@
-title: Blueprint Home Services
-description: Reliable local handyman help — small repairs, installs, and punch-list work.
-url: "https://www.blueprintmaintenanceservices.com" # set later (e.g. https://yourname.github.io)
-baseurl: "" # leave empty for root
+title: Charm City Build Club
+description: Baltimore-based community project built around useful work, practical learning, and shared effort.
+url: "https://www.charmcitybuildclub.com"
+baseurl: ""
 timezone: America/New_York
 
 markdown: kramdown
