@@ -7,8 +7,17 @@
   --raw-rule: 1px solid var(--raw-rule-color);
 }
 
-/* Force dark background — Bootstrap reboot overrides body bg */
-body.home-page,
+/* ============================================================
+   BOOTSTRAP + CUSTOM.CSS COLLISION FIXES
+   custom.css sets body bg to #fcfcf9 and .hero to #f5f7f4
+   We need !important to win on every colliding selector
+   ============================================================ */
+
+body.home-page {
+  background: var(--raw-black) !important;
+  color: var(--raw-white) !important;
+}
+
 body.home-page main {
   background: var(--raw-black) !important;
   padding-top: 0 !important;
@@ -17,7 +26,6 @@ body.home-page main {
   width: 100% !important;
 }
 
-/* Kill any Bootstrap container constraints inside main */
 body.home-page main > .container,
 body.home-page main > .container-fluid,
 body.home-page main > .container-xl {
@@ -25,18 +33,34 @@ body.home-page main > .container-xl {
   padding: 0 !important;
 }
 
-body.home-page {
-  background: var(--raw-black);
-  color: var(--raw-white);
-}
-
-body.home-page main {
-  padding-bottom: 0 !important;
-}
-
 body.home-page .site-footer {
   margin-top: 0 !important;
 }
+
+/* Fix: custom.css has .hero { background: #f5f7f4 } which collides */
+body.home-page .hero {
+  background: var(--raw-black) !important;
+  border-bottom: var(--raw-rule) !important;
+}
+
+/* Fix: custom.css/Bootstrap sets h1-h6 to Inter font */
+.raw-home h1,
+.raw-home h2,
+.raw-home h3,
+.raw-home h4 {
+  font-family: 'Bebas Neue', sans-serif !important;
+  letter-spacing: normal !important;
+  font-weight: 400 !important;
+}
+
+/* Fix: Bootstrap sets * { box-sizing } and p { margin-bottom } */
+.raw-home p {
+  margin-bottom: 0 !important;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
 
 .raw-home,
 .raw-home *,
@@ -93,7 +117,10 @@ body.home-page .site-footer {
   max-width: 100%;
 }
 
-/* shared small-type labels */
+/* ============================================================
+   SHARED LABELS
+   ============================================================ */
+
 .raw-home .hero-eyebrow,
 .raw-home .section-label,
 .raw-home .manifesto-label,
@@ -105,14 +132,16 @@ body.home-page .site-footer {
   letter-spacing: 0.28em;
 }
 
-/* hero */
+/* ============================================================
+   HERO
+   ============================================================ */
+
 .raw-home .hero {
   width: 100%;
   min-height: 88vh;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  border-bottom: var(--raw-rule);
-  padding: 0 40px;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  padding: 0 40px !important;
 }
 
 .raw-home .hero-left {
@@ -141,11 +170,11 @@ body.home-page .site-footer {
 
 .raw-home .hero-headline {
   margin: 0;
-  color: var(--raw-white);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4.4rem, 10vw, 9rem);
-  line-height: 0.92;
-  letter-spacing: 0.02em;
+  color: var(--raw-white) !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: clamp(4.4rem, 10vw, 9rem) !important;
+  line-height: 0.92 !important;
+  letter-spacing: 0.02em !important;
   text-wrap: balance;
 }
 
@@ -179,24 +208,33 @@ body.home-page .site-footer {
   gap: 16px;
 }
 
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
 .raw-home .btn-primary-raw {
   display: inline-block;
-  border: none;
-  background: var(--raw-white);
-  color: var(--raw-black);
+  border: none !important;
+  border-radius: 0 !important;
+  background: var(--raw-white) !important;
+  color: var(--raw-black) !important;
   padding: 14px 32px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 700 !important;
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: opacity 0.2s ease;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 .raw-home .btn-primary-raw:hover,
 .raw-home .btn-primary-raw:focus-visible {
   opacity: 0.85;
-  color: var(--raw-black);
+  color: var(--raw-black) !important;
+  background: var(--raw-white) !important;
+  transform: none !important;
 }
 
 .raw-home .btn-ghost {
@@ -209,6 +247,11 @@ body.home-page .site-footer {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: color 0.2s ease;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0;
+  box-shadow: none !important;
 }
 
 .raw-home .btn-ghost::after {
@@ -225,6 +268,10 @@ body.home-page .site-footer {
 .raw-home .btn-ghost:focus-visible::after {
   transform: translateX(4px);
 }
+
+/* ============================================================
+   HERO EXTRAS
+   ============================================================ */
 
 .raw-home .hero-vertical-text {
   align-self: flex-end;
@@ -286,7 +333,10 @@ body.home-page .site-footer {
   line-height: 1.55;
 }
 
-/* photo grid */
+/* ============================================================
+   PHOTO GRID
+   ============================================================ */
+
 .raw-home .photo-grid {
   width: 100%;
   display: grid;
@@ -333,7 +383,10 @@ body.home-page .site-footer {
   font-size: 0.75rem;
 }
 
-/* marquee */
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+
 .raw-home .marquee-strip {
   width: 100%;
   overflow: hidden;
@@ -362,7 +415,10 @@ body.home-page .site-footer {
   color: var(--raw-low);
 }
 
-/* section header */
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
 .raw-home .section-header {
   width: 100%;
   border-bottom: var(--raw-rule);
@@ -375,13 +431,16 @@ body.home-page .site-footer {
 
 .raw-home .section-title {
   color: var(--raw-white);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.04em !important;
 }
 
-/* steps */
+/* ============================================================
+   STEPS
+   ============================================================ */
+
 .raw-home .steps-grid {
   width: 100%;
   display: grid;
@@ -423,7 +482,10 @@ body.home-page .site-footer {
   line-height: 1.7;
 }
 
-/* types */
+/* ============================================================
+   TYPES
+   ============================================================ */
+
 .raw-home .types-grid {
   width: 100%;
   display: grid;
@@ -469,7 +531,10 @@ body.home-page .site-footer {
   line-height: 1.65;
 }
 
-/* manifesto */
+/* ============================================================
+   MANIFESTO
+   ============================================================ */
+
 .raw-home .manifesto {
   width: 100%;
   display: grid;
@@ -500,7 +565,10 @@ body.home-page .site-footer {
   color: var(--raw-mid);
 }
 
-/* cta */
+/* ============================================================
+   CTA BAR
+   ============================================================ */
+
 .raw-home .cta-bar {
   width: 100%;
   display: flex;
@@ -533,7 +601,10 @@ body.home-page .site-footer {
   font-size: 0.75rem;
 }
 
-/* animations */
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -550,7 +621,10 @@ body.home-page .site-footer {
   }
 }
 
-/* reduced motion */
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
 @media (prefers-reduced-motion: reduce) {
   .raw-home .hero-left,
   .raw-home .hero-right,
@@ -564,7 +638,10 @@ body.home-page .site-footer {
   }
 }
 
-/* tablet */
+/* ============================================================
+   TABLET
+   ============================================================ */
+
 @media (max-width: 1100px) {
   .raw-home .types-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -588,12 +665,15 @@ body.home-page .site-footer {
   }
 }
 
-/* mobile */
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
 @media (max-width: 900px) {
   .raw-home .hero {
     min-height: auto;
-    grid-template-columns: 1fr;
-    padding: 0 24px;
+    grid-template-columns: 1fr !important;
+    padding: 0 24px !important;
   }
 
   .raw-home .hero-left {
@@ -670,7 +750,7 @@ body.home-page .site-footer {
 
 @media (max-width: 640px) {
   .raw-home .hero-headline {
-    font-size: clamp(3.5rem, 20vw, 5rem);
+    font-size: clamp(3.5rem, 20vw, 5rem) !important;
   }
 
   .raw-home .hero-actions {
