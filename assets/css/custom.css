@@ -42,8 +42,8 @@ a:focus, .btn:focus, .form-control:focus{
 }
 
 .navbar{
-  background: rgba(252,252,249,.94) !important;
-  backdrop-filter: blur(8px);
+  background: #f6f3ec !important;
+  backdrop-filter: none;
   border-bottom: 1px solid var(--border) !important;
   z-index: 9999;
 }
@@ -54,17 +54,32 @@ a:focus, .btn:focus, .form-control:focus{
 }
 
 .nav-link{
-  color: rgba(23,33,43,.78) !important;
+  color: rgba(23,33,43,.82) !important;
   font-weight: 500;
   transition: color .18s ease;
 }
 
 .nav-link:hover{
-  color: var(--accent) !important;
+  color: var(--ink) !important;
 }
 
 .navbar-toggler{
   border-color: var(--border-strong);
+}
+
+/* navbar CTA only */
+.navbar .btn-primary{
+  background: transparent;
+  border: 1px solid rgba(23,33,43,.22);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.navbar .btn-primary:hover{
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+  transform: none;
 }
 
 .btn{
