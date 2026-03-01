@@ -38,7 +38,7 @@
   <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
     {% include navbar.html %}
 
-    <main class="pt-0 pb-4">
+    <main class="{% if page.body_class == 'home-page' %}p-0{% else %}pt-0 pb-4{% endif %}">
       {{ content }}
     </main>
 
