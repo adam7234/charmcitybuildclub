@@ -19,7 +19,9 @@ body.home-page .site-footer {
 }
 
 .raw-home,
-.raw-home * {
+.raw-home *,
+.raw-home *::before,
+.raw-home *::after {
   box-sizing: border-box;
 }
 
