@@ -194,11 +194,11 @@ body.home-page .hero {
 }
 
 .raw-home .hero-desc {
-  max-width: 440px;
+  max-width: 520px;
   margin-bottom: 36px;
   color: var(--raw-mid);
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .raw-home .hero-actions {
