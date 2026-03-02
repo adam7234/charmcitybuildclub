@@ -775,3 +775,29 @@ body.home-page .hero {
     font-size: 0.88rem;
   }
 }
+
+body.home-page,
+body.home-page p,
+body.home-page li,
+body.home-page a,
+body.home-page span {
+  font-size: 20px !important;
+  line-height: 1.8 !important;
+}
+
+body.home-page .hero-desc,
+body.home-page .pillar-desc,
+body.home-page .step-desc,
+body.home-page .type-desc,
+body.home-page .manifesto-body,
+body.home-page .photo-meta,
+body.home-page .cta-meta {
+  font-size: 20px !important;
+  line-height: 1.8 !important;
+}
+
+body.home-page .pillar-label,
+body.home-page .step-title,
+body.home-page .type-name {
+  font-size: 22px !important;
+}
