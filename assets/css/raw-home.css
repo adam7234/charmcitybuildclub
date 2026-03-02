@@ -77,9 +77,9 @@ body.home-page .hero {
   background: var(--raw-black);
   color: var(--raw-white);
   font-family: 'Barlow', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.6;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.7;
 }
 
 .raw-home::before {
