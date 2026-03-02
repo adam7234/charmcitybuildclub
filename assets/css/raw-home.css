@@ -801,3 +801,7 @@ body.home-page .step-title,
 body.home-page .type-name {
   font-size: 22px !important;
 }
+
+body {
+  background: red !important;
+}
