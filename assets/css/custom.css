@@ -485,23 +485,59 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 
 /* ============================================================
    FOOTER
+
+   The footer uses a dark (black) background so it feels like a
+   grounding "base" beneath the page. Light-on-dark requires its
+   own color overrides — our variables assume a light context.
+
+   LESSON — when you invert a section, re-declare:
+   1. Text colors  → white or rgba(white) at varying opacity
+   2. Border colors → rgba(white, low opacity) instead of --line
+   3. Link colors  → readable on dark, hover toward full white
+   4. Button styles → btn-outline-light + .footer-btn override
    ============================================================ */
 .site-footer {
-  background: var(--soft);
-  border-top: 1px solid var(--line);
-  color: var(--ink);
+  background: var(--black);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.75);
 }
 
+/* Bootstrap's .text-muted renders too dark on black backgrounds.
+   Force it to a light gray that's readable but not glaring. */
+.site-footer .text-muted {
+  color: rgba(255,255,255,0.5) !important;
+}
+
+/* Brand name beside the logo icon */
+.site-footer .fw-semibold {
+  color: var(--white);
+}
+
+/* The small icon/logo in the footer.
+   White background + faint border keeps it legible on black. */
+.footer-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--white);
+  border: 1px solid rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+/* Section column labels: "Site", "Project Hosts Get", etc.
+   Dimmed so they don't compete with the content below them. */
 .footer-title {
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--subtle);
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.35);
   margin-bottom: 0.85rem;
 }
 
+/* Nav links in the "Site" column */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -511,13 +547,60 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 .footer-links li + li { margin-top: 0.5rem; }
 
 .footer-links a {
-  color: var(--muted);
+  color: rgba(255,255,255,0.65);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.15s ease;
 }
 
-.footer-links a:hover { color: var(--black); }
+.footer-links a:hover { color: var(--white); }
+
+/* Plain <li> items without links (the benefit bullets).
+   :not(:has(a)) targets list items that contain no anchor tag. */
+.footer-links li:not(:has(a)) {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+}
+
+/* Email contact link */
+.footer-contact {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer-contact:hover { color: var(--white); }
+
+/* CTA buttons in the brand column.
+   LESSON — Bootstrap's btn-outline-light gives white border + white
+   text on dark backgrounds. We add .footer-btn to control radius,
+   size, and hover without fighting Bootstrap's cascade. */
+.footer-btn {
+  border-radius: var(--radius-sm) !important;
+  border-color: rgba(255,255,255,0.25) !important;
+  color: rgba(255,255,255,0.8) !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.footer-btn:hover {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.45) !important;
+  color: var(--white) !important;
+  transform: none;
+  box-shadow: none;
+}
+
+/* "Email" micro-label above the address */
+.site-footer .small {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.35);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
 
 
 /* ============================================================
