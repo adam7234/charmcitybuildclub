@@ -1,0 +1,562 @@
+/*
+  ============================================================
+  CHARM CITY BUILD CLUB — custom.css
+  ============================================================
+
+  HOW THIS FILE WORKS WITH BOOTSTRAP:
+  Bootstrap ships with its own base styles (reset, grid, buttons,
+  utilities). This file LAYERS ON TOP of Bootstrap. We use CSS
+  custom properties (variables) so all colors and sizes are
+  defined in one place and easy to change.
+
+  RULE: Never fight Bootstrap. Override it cleanly using the same
+  class names, or add new utility classes for things Bootstrap
+  doesn't handle.
+
+  DESIGN SYSTEM:
+  - Palette: pure monochrome (black, grays, white)
+  - Accent: not a color — it's weight and contrast
+  - Typography: DM Serif Display (headings) + DM Sans (body)
+  - Spacing: multiples of 0.25rem (4px base unit)
+  ============================================================
+*/
+
+
+/* ============================================================
+   CSS CUSTOM PROPERTIES (Variables)
+   
+   WHY VARIABLES?
+   Define once, use everywhere. If you want to tweak the border
+   color across the whole site, change --line here and it updates
+   every card, divider, and rule automatically.
+   ============================================================ */
+:root {
+  /* Palette — pure monochrome */
+  --black:    #0f0f0f;   /* headings, high-contrast text         */
+  --ink:      #1c1c1c;   /* body text                            */
+  --muted:    #5a5a5a;   /* supporting / secondary text          */
+  --subtle:   #888888;   /* eyebrows, labels, captions           */
+  --soft:     #f4f4f2;   /* card backgrounds                     */
+  --softer:   #efefed;   /* slightly deeper surfaces             */
+  --line:     #e0e0de;   /* borders                              */
+  --line-md:  #c8c8c6;   /* stronger borders                     */
+  --white:    #ffffff;
+
+  /* Typography — loaded via Google Fonts in your layout file.
+     Add this to your <head>:
+     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> */
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing scale — add Bootstrap utilities like py-6 that don't exist by default */
+  --space-6: 4rem;    /* used by py-6 / my-6 below */
+  --space-7: 6rem;    /* used by py-lg-7           */
+
+  /* Shape */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+
+  /* Elevation — minimal shadows keep the monochrome look clean */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+}
+
+
+/* ============================================================
+   SPACING UTILITIES (extends Bootstrap)
+   
+   Bootstrap only ships up to py-5 (3rem). We add py-6 and py-lg-7
+   so section padding can breathe on large screens.
+   ============================================================ */
+.py-6          { padding-top: var(--space-6) !important; padding-bottom: var(--space-6) !important; }
+.pt-6          { padding-top: var(--space-6) !important; }
+.pb-6          { padding-bottom: var(--space-6) !important; }
+.mb-6          { margin-bottom: var(--space-6) !important; }
+
+@media (min-width: 992px) {
+  .py-lg-7     { padding-top: var(--space-7) !important; padding-bottom: var(--space-7) !important; }
+}
+
+
+/* ============================================================
+   BASE / RESET OVERRIDES
+   
+   WHY: Bootstrap's default font and color don't match our design.
+   We swap them here at the root level so every element inherits
+   the right base styles.
+   ============================================================ */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;  /* crisper text on Mac / iOS */
+  text-rendering: optimizeLegibility;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   
+   LESSON — Type hierarchy is your most important design tool.
+   With a monochrome palette, size + weight + font-family do all
+   the work that color usually does.
+   
+   display-4 → h2 → h3 = three levels of importance.
+   DM Serif Display for headlines = editorial character.
+   DM Sans for body = clean, highly legible at small sizes.
+   ============================================================ */
+h1, h2, h3, h4, h5, h6,
+.display-4, .display-5, .display-6 {
+  font-family: var(--font-display);
+  color: var(--black);
+  letter-spacing: -0.02em;  /* tight tracking looks more editorial */
+  font-weight: 400;          /* DM Serif Display is already bold-feeling at 400 */
+  line-height: 1.15;
+}
+
+/* body type defaults */
+p, li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 62ch;  /* ~62 chars per line = optimal readability */
+}
+
+/* small label text — eyebrows, card labels */
+.eyebrow, .card-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--line-md);
+}
+
+a:hover {
+  color: var(--black);
+}
+
+/* Focus rings use a subtle dark ring — accessible without colored glow */
+a:focus, .btn:focus, .form-control:focus, .form-select:focus {
+  outline: 2px solid var(--black);
+  outline-offset: 3px;
+  box-shadow: none !important;
+}
+
+
+/* ============================================================
+   BUTTONS
+   
+   LESSON — Two button variants = two levels of priority.
+   btn-primary: the main action (filled, black)
+   btn-outline-dark: secondary action (bordered, transparent)
+   
+   Using Bootstrap's built-in btn-outline-dark means we get all
+   the hover/focus states for free and just tweak the radius.
+   ============================================================ */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-md);
+  transition: all 0.15s ease;
+  padding: 0.6rem 1.35rem;
+}
+
+/* Override Bootstrap's blue primary with our black */
+.btn-primary {
+  background-color: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+  transform: translateY(-1px);  /* subtle lift on hover */
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-dark {
+  border-color: var(--line-md);
+  color: var(--ink);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--soft);
+  border-color: var(--muted);
+  color: var(--black);
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.navbar {
+  background: rgba(255,255,255,0.95) !important;
+  border-bottom: 1px solid var(--line) !important;
+  backdrop-filter: blur(8px);         /* frosted glass on scroll */
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--black) !important;
+  letter-spacing: -0.02em;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--muted) !important;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--black) !important;
+}
+
+
+/* ============================================================
+   HERO SECTION
+   
+   The subtle radial gradient creates a slight warmth in the
+   top-right without introducing any color. It's direction +
+   lightness, not hue.
+   ============================================================ */
+.hero {
+  background:
+    radial-gradient(ellipse at top right, rgba(0,0,0,0.025) 0%, transparent 60%),
+    var(--white);
+}
+
+/* Mini stat bar below hero CTAs */
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--subtle);
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black);
+}
+
+
+/* ============================================================
+   CARDS
+   
+   LESSON — Card hierarchy in this design:
+   
+   feature-card  = hero sidebar card, white background, stronger border
+   audience-card = two-column section, soft background
+   step-card     = process steps, minimal, numbered
+   fit-card      = project types, very light, informational
+   cta-panel     = bottom call-to-action band
+   
+   They share a base pattern (border + radius + shadow) and
+   differ only in background color and padding weight.
+   ============================================================ */
+
+/* Shared card base — all cards inherit this */
+.feature-card,
+.audience-card,
+.step-card,
+.fit-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: box-shadow 0.2s ease;
+}
+
+/* feature-card: hero sidebar — most prominent */
+.feature-card {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+/* audience-card: "who it's for" section — warm soft background */
+.audience-card {
+  background: var(--soft);
+  box-shadow: var(--shadow-sm);
+}
+
+.audience-card:hover {
+  box-shadow: var(--shadow-md);  /* subtle lift on hover */
+}
+
+/* step-card: numbered process steps — clean, minimal */
+.step-card {
+  background: var(--white);
+  box-shadow: none;  /* flat — no depth needed for a sequence */
+}
+
+/* fit-card: project type examples — subtle, informational */
+.fit-card {
+  background: var(--softer);
+  box-shadow: none;
+  border-color: var(--line);
+}
+
+/* Step number circle badge */
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Fit card icon — uses a unicode square, styled as a decorative mark */
+.fit-icon {
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.3em;  /* spread three squares for visual interest */
+}
+
+
+/* ============================================================
+   CTA PANEL
+   
+   The bottom CTA band uses a dark inversion (black background)
+   to signal "this is the end, and here's your next step."
+   In a monochrome design, a full black block is as powerful
+   as a bright accent color block in other designs.
+   ============================================================ */
+.cta-panel {
+  background: var(--black);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  color: var(--white);
+}
+
+.cta-panel h2,
+.cta-panel p {
+  color: var(--white);
+}
+
+/* Inside cta-panel, mute gets a lighter treatment */
+.cta-panel .text-muted {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.cta-panel .eyebrow {
+  color: rgba(255,255,255,0.45);
+}
+
+/* Invert buttons inside the dark panel */
+.cta-panel .btn-primary {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+}
+
+.cta-panel .btn-primary:hover {
+  background: var(--soft);
+  border-color: var(--soft);
+  color: var(--black);
+}
+
+.cta-panel .btn-outline-dark {
+  border-color: rgba(255,255,255,0.3);
+  color: var(--white);
+}
+
+.cta-panel .btn-outline-dark:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+  color: var(--white);
+}
+
+
+/* ============================================================
+   CLEAN LIST
+   
+   The default <ul> has bullet dots and padding we don't want.
+   .clean-list keeps the list semantics (good for accessibility)
+   but gives us full control over spacing.
+   ============================================================ */
+.clean-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.clean-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--ink);
+}
+
+/* Custom bullet: a small em dash instead of a dot */
+.clean-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--subtle);
+  font-size: 0.75rem;
+  top: 0.25em;
+}
+
+.clean-list li + li {
+  margin-top: 0.85rem;
+}
+
+
+/* ============================================================
+   SECTION HEADERS
+   
+   Consistent treatment for every section's intro block.
+   max-width keeps the header copy tight — it's a label, not a paragraph.
+   ============================================================ */
+.section-header {
+  max-width: 56ch;
+}
+
+.section-header h2 {
+  margin-bottom: 0.5rem;
+}
+
+
+/* ============================================================
+   CONTENT PAGES (blog posts, markdown pages)
+   
+   These styles apply to the .content wrapper used on inner pages.
+   ============================================================ */
+.content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 68ch;
+}
+
+.content h2 { margin-top: 2.25rem; margin-bottom: 0.75rem; }
+.content h3 { margin-top: 1.75rem; margin-bottom: 0.6rem; }
+.content p, .content ul, .content ol { margin-bottom: 1.1rem; }
+.content ul, .content ol { padding-left: 1.3rem; }
+.content li { margin-bottom: 0.4rem; }
+
+.content a {
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--line-md);
+  text-underline-offset: 3px;
+}
+
+.content a:hover {
+  text-decoration-color: var(--black);
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2rem 0;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--soft);
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.footer-title {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--subtle);
+  margin-bottom: 0.85rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li + li { margin-top: 0.5rem; }
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover { color: var(--black); }
+
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS
+   
+   LESSON — Mobile-first vs. desktop-first:
+   Bootstrap is mobile-first. Base styles apply to all screens.
+   @media (min-width: ...) adds styles for larger screens.
+   Here we use max-width queries to REDUCE styles on small screens
+   (a common pattern when your base design is desktop-centric).
+   ============================================================ */
+
+/* md and below: tighten heading sizes */
+@media (max-width: 991.98px) {
+  .display-4 {
+    font-size: calc(1.8rem + 2vw);
+    letter-spacing: -0.025em;
+  }
+
+  .feature-card,
+  .audience-card,
+  .step-card,
+  .fit-card,
+  .cta-panel {
+    padding: 1.35rem;
+  }
+}
+
+/* sm and below: slightly larger body text for easier reading */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+  }
+
+  .cta-panel {
+    padding: 1.5rem 1.25rem;
+  }
+}
