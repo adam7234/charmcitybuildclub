@@ -1,6 +1,6 @@
 /*
   ============================================================
-  CHARM CITY BUILD CLUB â€” custom.css
+  CHARM CITY BUILD CLUB — custom.css
   ============================================================
 
   HOW THIS FILE WORKS WITH BOOTSTRAP:
@@ -15,7 +15,7 @@
 
   DESIGN SYSTEM:
   - Palette: pure monochrome (black, grays, white)
-  - Accent: not a color â€” it's weight and contrast
+  - Accent: not a color — it's weight and contrast
   - Typography: DM Serif Display (headings) + DM Sans (body)
   - Spacing: multiples of 0.25rem (4px base unit)
   ============================================================
@@ -31,7 +31,7 @@
    every card, divider, and rule automatically.
    ============================================================ */
 :root {
-  /* Palette â€” pure monochrome */
+  /* Palette — pure monochrome */
   --black:    #0f0f0f;   /* headings, high-contrast text         */
   --ink:      #1c1c1c;   /* body text                            */
   --muted:    #5a5a5a;   /* supporting / secondary text          */
@@ -42,13 +42,13 @@
   --line-md:  #c8c8c6;   /* stronger borders                     */
   --white:    #ffffff;
 
-  /* Typography â€” loaded via Google Fonts in your layout file.
+  /* Typography — loaded via Google Fonts in your layout file.
      Add this to your <head>:
      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> */
   --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
   --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Spacing scale â€” add Bootstrap utilities like py-6 that don't exist by default */
+  /* Spacing scale — add Bootstrap utilities like py-6 that don't exist by default */
   --space-6: 4rem;    /* used by py-6 / my-6 below */
   --space-7: 6rem;    /* used by py-lg-7           */
 
@@ -57,7 +57,7 @@
   --radius-md:  12px;
   --radius-lg:  16px;
 
-  /* Elevation â€” minimal shadows keep the monochrome look clean */
+  /* Elevation — minimal shadows keep the monochrome look clean */
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
 }
@@ -102,11 +102,11 @@ body {
 /* ============================================================
    TYPOGRAPHY
    
-   LESSON â€” Type hierarchy is your most important design tool.
+   LESSON — Type hierarchy is your most important design tool.
    With a monochrome palette, size + weight + font-family do all
    the work that color usually does.
    
-   display-4 â†’ h2 â†’ h3 = three levels of importance.
+   display-4 → h2 → h3 = three levels of importance.
    DM Serif Display for headlines = editorial character.
    DM Sans for body = clean, highly legible at small sizes.
    ============================================================ */
@@ -133,7 +133,7 @@ p, li {
   max-width: 62ch;  /* ~62 chars per line = optimal readability */
 }
 
-/* small label text â€” eyebrows, card labels */
+/* small label text — eyebrows, card labels */
 .eyebrow, .card-label {
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -152,7 +152,7 @@ a:hover {
   color: var(--black);
 }
 
-/* Focus rings use a subtle dark ring â€” accessible without colored glow */
+/* Focus rings use a subtle dark ring — accessible without colored glow */
 a:focus, .btn:focus, .form-control:focus, .form-select:focus {
   outline: 2px solid var(--black);
   outline-offset: 3px;
@@ -163,7 +163,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 /* ============================================================
    BUTTONS
    
-   LESSON â€” Two button variants = two levels of priority.
+   LESSON — Two button variants = two levels of priority.
    btn-primary: the main action (filled, black)
    btn-outline-dark: secondary action (bordered, transparent)
    
@@ -269,7 +269,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 /* ============================================================
    CARDS
    
-   LESSON â€” Card hierarchy in this design:
+   LESSON — Card hierarchy in this design:
    
    feature-card  = hero sidebar card, white background, stronger border
    audience-card = two-column section, soft background
@@ -281,7 +281,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
    differ only in background color and padding weight.
    ============================================================ */
 
-/* Shared card base â€” all cards inherit this */
+/* Shared card base — all cards inherit this */
 .feature-card,
 .audience-card,
 .step-card,
@@ -292,13 +292,13 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
   transition: box-shadow 0.2s ease;
 }
 
-/* feature-card: hero sidebar â€” most prominent */
+/* feature-card: hero sidebar — most prominent */
 .feature-card {
   background: var(--white);
   box-shadow: var(--shadow-md);
 }
 
-/* audience-card: "who it's for" section â€” warm soft background */
+/* audience-card: "who it's for" section — warm soft background */
 .audience-card {
   background: var(--soft);
   box-shadow: var(--shadow-sm);
@@ -308,13 +308,13 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
   box-shadow: var(--shadow-md);  /* subtle lift on hover */
 }
 
-/* step-card: numbered process steps â€” clean, minimal */
+/* step-card: numbered process steps — clean, minimal */
 .step-card {
   background: var(--white);
-  box-shadow: none;  /* flat â€” no depth needed for a sequence */
+  box-shadow: none;  /* flat — no depth needed for a sequence */
 }
 
-/* fit-card: project type examples â€” subtle, informational */
+/* fit-card: project type examples — subtle, informational */
 .fit-card {
   background: var(--softer);
   box-shadow: none;
@@ -337,7 +337,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
   letter-spacing: 0.02em;
 }
 
-/* Fit card icon â€” uses a unicode square, styled as a decorative mark */
+/* Fit card icon — uses a unicode square, styled as a decorative mark */
 .fit-icon {
   font-size: 0.65rem;
   color: var(--muted);
@@ -412,20 +412,13 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
   margin: 0;
 }
 
+/* No ::before pseudo-element — border-left is the visual marker.
+   Pure CSS properties, zero characters, zero encoding risk. */
 .clean-list li {
   position: relative;
-  padding-left: 1.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--line-md);
   color: var(--ink);
-}
-
-/* Custom bullet: a small em dash instead of a dot */
-.clean-list li::before {
-  content: '\2014';  /* em dash as a unicode escape â€” immune to encoding issues */
-  position: absolute;
-  left: 0;
-  color: var(--subtle);
-  font-size: 0.75rem;
-  top: 0.25em;
 }
 
 .clean-list li + li {
@@ -437,7 +430,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
    SECTION HEADERS
    
    Consistent treatment for every section's intro block.
-   max-width keeps the header copy tight â€” it's a label, not a paragraph.
+   max-width keeps the header copy tight — it's a label, not a paragraph.
    ============================================================ */
 .section-header {
   max-width: 56ch;
@@ -488,13 +481,13 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 
    The footer uses a dark (black) background so it feels like a
    grounding "base" beneath the page. Light-on-dark requires its
-   own color overrides â€” our variables assume a light context.
+   own color overrides — our variables assume a light context.
 
-   LESSON â€” when you invert a section, re-declare:
-   1. Text colors  â†’ white or rgba(white) at varying opacity
-   2. Border colors â†’ rgba(white, low opacity) instead of --line
-   3. Link colors  â†’ readable on dark, hover toward full white
-   4. Button styles â†’ btn-outline-light + .footer-btn override
+   LESSON — when you invert a section, re-declare:
+   1. Text colors  → white or rgba(white) at varying opacity
+   2. Border colors → rgba(white, low opacity) instead of --line
+   3. Link colors  → readable on dark, hover toward full white
+   4. Button styles → btn-outline-light + .footer-btn override
    ============================================================ */
 .site-footer {
   background: var(--black);
@@ -575,7 +568,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 .footer-contact:hover { color: var(--white); }
 
 /* CTA buttons in the brand column.
-   LESSON â€” Bootstrap's btn-outline-light gives white border + white
+   LESSON — Bootstrap's btn-outline-light gives white border + white
    text on dark backgrounds. We add .footer-btn to control radius,
    size, and hover without fighting Bootstrap's cascade. */
 .footer-btn {
@@ -610,7 +603,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 /* ============================================================
    RESPONSIVE ADJUSTMENTS
    
-   LESSON â€” Mobile-first vs. desktop-first:
+   LESSON — Mobile-first vs. desktop-first:
    Bootstrap is mobile-first. Base styles apply to all screens.
    @media (min-width: ...) adds styles for larger screens.
    Here we use max-width queries to REDUCE styles on small screens
