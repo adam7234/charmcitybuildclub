@@ -252,7 +252,7 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
 
 /* ── Music Widget ─────────────────────────────────────── */
 .music-widget {
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   right: 1.75rem;
   display: flex;
