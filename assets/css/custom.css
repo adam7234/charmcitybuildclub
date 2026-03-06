@@ -245,75 +245,77 @@ a:focus, .btn:focus, .form-control:focus, .form-select:focus {
    ============================================================ */
 hero {
     position: relative;
+    background:
+    radial-gradient(ellipse at top right, rgba(0,0,0,0.025) 0%, transparent 60%),
+    var(--white);
   }
 
-  .music-widget {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.75rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.3rem;
-  }
+/* ── Music Widget ─────────────────────────────────────── */
+.music-widget {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
 
-  .music-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    background: transparent;
-    border: 1px solid var(--line-md);
-    border-radius: 2rem;
-    padding: 0.3rem 0.75rem 0.3rem 0.65rem;
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--subtle);
-    cursor: pointer;
-    transition: all 0.15s ease;
-  }
+.music-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid var(--line-md);
+  border-radius: 2rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
 
-  .music-btn:hover {
-    border-color: var(--muted);
-    color: var(--ink);
-  }
+.music-btn:hover {
+  border-color: var(--muted);
+  color: var(--ink);
+}
 
-  .music-btn.playing {
-    background: var(--black);
-    border-color: var(--black);
-    color: var(--white);
-  }
+.music-btn.playing {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
 
-  .music-btn.playing svg {
-    animation: music-pulse 1s ease-in-out infinite;
-  }
+.music-btn.playing svg {
+  animation: music-pulse 1s ease-in-out infinite;
+}
 
-  @keyframes music-pulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.3; }
-  }
+@keyframes music-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
 
-  .music-now-playing {
-    font-family: var(--font-body);
-    font-size: 0.68rem;
-    color: var(--subtle);
-    letter-spacing: 0.03em;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-  }
+.music-now-playing {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  color: var(--subtle);
+  letter-spacing: 0.03em;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
 
-  .music-now-playing.visible {
-    opacity: 1;
-  }
+.music-now-playing.visible {
+  opacity: 1;
+}
 
-  /* Hide on small screens — not enough room */
-  @media (max-width: 575.98px) {
-    .music-widget { display: none; }
-  }
-
+@media (max-width: 575.98px) {
+  .music-widget { display: none; }
+}
 /* ============================================================
    CARDS
    
