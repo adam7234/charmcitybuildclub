@@ -40,7 +40,7 @@ Not every useful project gets done. Some are too small to hire out, too underfun
 
 At the same time, a lot of people want more than passive socializing. They want to feel useful. They want to learn practical skills. They want to contribute in a way that feels real.
 
-Charm City Build Club brings those two things together: service through real work, learning through doing, and community through shared effort.
+Charm City Works brings those two things together: service through real work, learning through doing, and community through shared effort.
 
 We also think the timing matters. As more desk-based and digital work is reshaped by technology, hands-on skills and local problem-solving become more valuable — not less. There's something worth building here, in every sense.
 
