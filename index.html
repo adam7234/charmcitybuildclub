@@ -53,32 +53,15 @@ description: Charm City works
 <section class="hero border-bottom">
   <div class="container py-5 py-lg-7">
     <div class="row align-items-center g-5">
-
       <!-- LEFT: Primary copy column -->
       <div class="col-lg-7">
-
-        <!-- Eyebrow: tiny uppercase label sets context immediately.
-             Uses letter-spacing to feel structured, not shouted. -->
-        <p class="eyebrow mb-3">Baltimore-based &middot; Community &middot; Learn By doing </p>
-
-        <!-- Headline: display-4 is Bootstrap's largest headline class.
-             The goal is ONE punchy sentence. Under 12 words if possible.
-             "Build days" is concrete — it creates a mental image. -->
+        <p class="eyebrow mb-3">Baltimore-based &middot; Community &middot; Learn By doing</p>
         <h1 class="display-4 mb-4">
-          We source fun and interesting hands-on projects, volunteers are excited to sign up for. 
+          We source fun and interesting hands-on projects, volunteers are excited to sign up for.
         </h1>
-
-        <!-- Subhead: expands on the headline. Explains the model.
-             max-width: 62ch keeps lines short = easier to read.
-             62 characters per line is a classic readability sweet spot. -->
         <p class="lead mb-5">
-         Free help for small projects — interesting work, practical skills, and real community.
+          Free help for small projects — interesting work, practical skills, and real community.
         </p>
-
-        <!-- CTAs: Two paths, one for each audience.
-             Primary (filled) = hosts, because getting projects is the
-             supply-side constraint. Secondary (outlined) = volunteers.
-             btn-lg makes them easy to tap on mobile. -->
         <div class="d-flex flex-wrap gap-3 mb-6">
           <a href="{{ '/submit-project/' | relative_url }}"
              class="btn btn-primary btn-lg">
@@ -89,18 +72,14 @@ description: Charm City works
             Volunteer / Get Involved
           </a>
         </div>
-
-        <!-- Mini stat bar: three quick proof points below the CTAs.
-             These reassure skeptics without interrupting the flow.
-             Each one is paired: label (what it is) + value (what you get). -->
         <div class="row g-3 pt-2 border-top">
           <div class="col-4">
             <p class="stat-label mb-1">For hosts</p>
-            <p class="stat-value mb-0"> Labor to get your project done </p>
+            <p class="stat-value mb-0">Labor to get your project done</p>
           </div>
           <div class="col-4">
             <p class="stat-label mb-1">For volunteers</p>
-            <p class="stat-value mb-0">Interesting projects, Fun volunteer opportuntiies, Community </p>
+            <p class="stat-value mb-0">Interesting projects, fun opportunities, community</p>
           </div>
           <div class="col-4">
             <p class="stat-label mb-1">For Baltimore</p>
@@ -108,9 +87,28 @@ description: Charm City works
           </div>
         </div>
       </div>
-      
-    </section> 
-  
+    </div>
+  </div>
+
+  <!-- Music widget — top right corner of hero -->
+  <div class="music-widget">
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Play Back in Black by AC/DC">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+      </svg>
+      <span>vibe</span>
+    </button>
+    <span class="music-now-playing" id="musicLabel">Back in Black · AC/DC</span>
+    <iframe
+      id="music-player"
+      src=""
+      data-src="https://www.youtube.com/embed/pAgnJDJN4VA?autoplay=1&enablejsapi=1"
+      style="display:none; width:0; height:0; border:none;"
+      allow="autoplay; encrypted-media"
+      title="AC/DC — Back in Black">
+    </iframe>
+  </div>
+</section>
 
       <!-- Photo grid --> 
 <section class="photo-grid-section border-bottom">
@@ -410,3 +408,24 @@ description: Charm City works
     </div>
   </div>
 </section>
+
+<script>
+    function toggleMusic() {
+    var btn    = document.getElementById('musicBtn');
+    var iframe = document.getElementById('music-player');
+    var label  = document.getElementById('musicLabel');
+    var playing = btn.classList.contains('playing');
+
+    if (playing) {
+      iframe.src = '';
+      btn.classList.remove('playing');
+      label.classList.remove('visible');
+      btn.querySelector('span').textContent = 'vibe';
+    } else {
+      iframe.src = iframe.getAttribute('data-src');
+      btn.classList.add('playing');
+      label.classList.add('visible');
+      btn.querySelector('span').textContent = 'playing';
+    }
+  }
+</script>
