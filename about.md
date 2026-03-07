@@ -4,21 +4,19 @@ title: About
 permalink: /about/
 ---
 
-Charm City Works is built on a simple idea: useful work can create community.
-
-We connect Baltimore homeowners who have small practical projects with volunteers who want to learn hands-on skills, meet their neighbors, and do something real with a Sunday.
+We match Baltimore homeowners who have small projects with volunteers who want to actually do something on a weekend.
 
 ---
 
 ## If you have a project
 
-You cover materials. We cover the rest.
+You cover materials. We handle everything else.
 
-Submit your project, and if it's a good fit we'll organize a build day and bring a team of volunteers to get it done. You don't need to manage the day or recruit anyone — that's on us.
+Submit your project — if it's a good fit, we'll put together a build day and show up with a crew. You don't need to coordinate anything or round up help. That's our job.
 
-**Low-income households** may also qualify for help with material costs. Just note it when you submit.
+**Low-income households** can apply for help with material costs too. Just mention it when you submit.
 
-The best projects are small to medium in scope, clearly defined, and completable in a single session: painting, yard cleanup, organizing, simple repairs, minor exterior work. When in doubt, submit it — we'll let you know if it doesn't fit.
+The sweet spot: small to medium projects, clearly scoped, doable in a day. Painting, yard work, organizing, basic repairs, exterior cleanup. Not sure if it qualifies? Submit it anyway and we'll tell you.
 
 [Submit a project →](/submit-project)
 
@@ -26,9 +24,9 @@ The best projects are small to medium in scope, clearly defined, and completable
 
 ## If you want to volunteer
 
-No experience required. Just show up ready to work.
+No experience needed. Show up, work, learn something.
 
-Build days are a hands-on way to learn practical skills, meet people who actually do things, and leave with something visible to show for your time. Every session is a real project with real impact — same day.
+Build days are hands-on — you'll pick up real skills, meet people who know how to do things, and actually finish something by end of day. No passive networking, no theoretical workshops.
 
 [Sign up to volunteer →](/volunteer)
 
@@ -36,18 +34,18 @@ Build days are a hands-on way to learn practical skills, meet people who actuall
 
 ## Why this exists
 
-Not every useful project gets done. Some are too small to hire out, too underfunded to tackle alone, or just keep getting pushed to next month — even when they'd make a real difference.
+A lot of useful projects don't get done. Too small to hire out, not enough budget to tackle alone, or just stuck on the "someday" list — even when knocking them out would make a real difference.
 
-At the same time, a lot of people want more than passive socializing. They want to feel useful. They want to learn practical skills. They want to contribute in a way that feels real.
+Meanwhile, plenty of people want more from their free time than another social event. They want to learn something with their hands. They want to feel like they actually did something.
 
-Charm City Works brings those two things together: service through real work, learning through doing, and community through shared effort.
+That's the gap Charm City Works fills.
 
-We also think the timing matters. As more desk-based and digital work is reshaped by technology, hands-on skills and local problem-solving become more valuable — not less. There's something worth building here, in every sense.
+We also think the moment matters. As more work gets automated or moved online, practical skills and local problem-solving are worth more — not less. Something real is worth building here.
 
 ---
 
-## What's in scope
+## What we take on
 
-Good fits: painting and refresh work, yard and exterior cleanup, organizing neglected spaces, simple beginner-friendly repairs, and small improvement projects with visible impact.
+**In scope:** painting and refresh work, yard and exterior cleanup, organizing neglected spaces, beginner-friendly repairs, small improvements with visible results.
 
-Outside our scope: major structural work, electrical, plumbing or HVAC, high-risk demolition, hazardous environments, or anything that requires a licensed contractor. The goal is to keep the work useful, realistic, and responsible.
+**Out of scope:** structural work, electrical, plumbing, HVAC, demolition, hazardous conditions, or anything requiring a licensed contractor. We keep it useful and realistic.
