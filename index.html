@@ -408,6 +408,13 @@ description: Charm City works
 </section>
 
 <script>
+    
+
+  function toggleMusic() {
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    window.open('https://www.youtube.com/watch?v=pAgnJDJN4VA', '_blank');
+    return;
+  }
     function toggleMusic() {
     var btn    = document.getElementById('musicBtn');
     var iframe = document.getElementById('music-player');
@@ -425,12 +432,6 @@ description: Charm City works
       label.classList.add('visible');
       btn.querySelector('span').textContent = 'playing';
     }
-  }
-
-  function toggleMusic() {
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
-    window.open('https://www.youtube.com/watch?v=pAgnJDJN4VA', '_blank');
-    return;
   }
   // ... rest of your existing toggle code
 }
