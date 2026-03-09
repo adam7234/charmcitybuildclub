@@ -14,8 +14,6 @@ You cover materials. We handle everything else.
 
 Submit your project — if it's a good fit, we'll put together a build day and show up with a crew. You don't need to coordinate anything or round up help. That's our job.
 
-**Low-income households** can apply for help with material costs too. Just mention it when you submit.
-
 The sweet spot: small to medium projects, clearly scoped, doable in a day. Painting, yard work, organizing, basic repairs, exterior cleanup. Not sure if it qualifies? Submit it anyway and we'll tell you.
 
 [Submit a project →](/submit-project)
