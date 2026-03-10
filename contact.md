@@ -7,8 +7,6 @@ permalink: /contact/
 
 <div class="ml-embedded" data-form="eoJUQ6"></div>
 
-Charm City Build Club is built around practical community projects, shared effort, and learning by doing. If you have a project to submit, want to volunteer, or just want to ask a question, reach out directly.
-
 ## Submit a project
 
 If you have a small, practical project that could benefit from community support, send the details by email or text.
