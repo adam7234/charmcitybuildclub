@@ -1,7 +1,5 @@
 # Charm City Build Club Process Wiki
 
-> Baltimore has real work to do. That work creates opportunities for practical contribution. Practical contribution creates opportunities for shared effort. Shared effort creates community. Community, combined with hands-on work, creates learning. Learning builds confidence and visible value.
-
 This wiki exists to help define how Charm City Build Club actually works in practice. The goal is to make the project clear, repeatable, and easier to execute.
 
 ## Project sourcing
