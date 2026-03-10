@@ -35,6 +35,15 @@
       <link rel="stylesheet" href="{{ page.page_css | relative_url }}" />
     {% endif %}
   </head>
+  
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2176476');
+  </script>
+
 
   <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
     <!-- Global navigation lives in an include so every page stays consistent. -->
