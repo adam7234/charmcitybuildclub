@@ -1,12 +1,9 @@
 ---
 layout: page
-title: Contact
-subtitle: Have a project in mind, want to get involved, or have a question? Reach out here.
+title: Volunteer
+subtitle: 
 permalink: /contact/
 ---
-
-
-## Volunteer 
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeGSm9IQyeQqYh6fgtRADshFI7um_2R3vYamzabiLU8BN6HSA/viewform?embedded=true" width="640" height="1432" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
