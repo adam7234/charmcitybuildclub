@@ -1,6 +1,6 @@
 # Charm City Works Process Wiki
 
-This wiki exists to help define how Charm City Build Club actually works in practice. The goal is to make the project clear, repeatable, and easier to execute.
+This wiki exists to help define how Charm City Works actually works in practice. The goal is to make the project clear, repeatable, and easier to execute.
 
 ## Project sourcing
 
