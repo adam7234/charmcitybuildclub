@@ -5,18 +5,7 @@ subtitle:
 permalink: /contact/
 ---
 
-<h2>Join the Build List</h2>
-<p>Sign up to hear about upcoming build days, neighborhood projects, and ways to get involved.</p>
-
 <div class="ml-embedded" data-form="eoJUQ6"></div>
-
-<script>
-(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-ml('account', '2176476');
-</script>
 
 Charm City Build Club is built around practical community projects, shared effort, and learning by doing. If you have a project to submit, want to volunteer, or just want to ask a question, reach out directly.
 
