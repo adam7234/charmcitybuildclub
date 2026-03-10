@@ -1,79 +1,53 @@
-# CharmCityBuildClub Wiki
+# Charm City Build Club Process Wiki
 
-> *Baltimore has real work to do. That work creates opportunities for practical contribution. Practical contribution creates opportunities for shared effort. Shared effort creates community. Community, combined with hands-on work, creates learning. Learning builds confidence and visible value.*
+> Baltimore has real work to do. That work creates opportunities for practical contribution. Practical contribution creates opportunities for shared effort. Shared effort creates community. Community, combined with hands-on work, creates learning. Learning builds confidence and visible value.
 
----
+This wiki exists to help define how Charm City Build Club actually works in practice. The goal is to make the project clear, repeatable, and easier to execute.
 
-## 1. Who We Are & Mission
+## Project sourcing
 
-- What problem in Baltimore are we here to solve?
-- Who do we serve — neighborhoods, organizations, individuals?
-- What makes us different from other volunteer or build orgs?
-- What does success look like in 1 year? 3 years?
+How do we consistently generate the right kinds of project inquiries from residents, neighborhoods, and local organizations?
 
----
+## Project screening
 
-## 2. Legal & Safety Basics
+How do we decide which projects fit the model and avoid jobs that are too big, too risky, too vague, or not suitable for volunteers?
 
-- What is our legal structure? (informal group, LLC, 501c3, fiscally sponsored?)
-- Are we registered in Maryland? What do we need to stay compliant?
-- Do volunteers sign a waiver before showing up to a site?
-- What's our process if someone gets hurt on a project?
-- What insurance do we carry, if any?
+## Project brief creation
 
----
+How do we turn an approved project into a clear, scoped, workable plan that volunteers can understand and execute?
 
-## 3. How We Run Projects
+## Volunteer recruitment
 
-- How does a project go from idea → approved → active?
-- Who owns a project once it starts? What does that role include?
-- How do we scope work so it's achievable in a day or weekend?
-- How do we document what we did? (photos, notes, sign-in sheets)
-- How do we close out a project and capture lessons learned?
+How do we attract, confirm, and prepare the right number of volunteers for each project day?
 
----
+## Project day operations
 
-## 4. How We Manage Volunteers
+How do we run a project day so that it is organized, safe, useful, and a good experience for everyone involved?
 
-- How do new volunteers find us and get onboarded?
-- How do we match people's skills to what a project actually needs?
-- How do we keep people coming back after the first time?
-- How do we recognize contributions — publicly and privately?
-- How do we handle someone who isn't a good fit?
+## Documentation and closeout
 
----
+How do we capture what happened, record what was accomplished, and close out the project cleanly?
 
-## 5. Comms & Outreach
+## Momentum and growth
 
-- Where do we show up online? (website, Instagram, newsletter, etc.)
-- What's our voice — how do we talk about our work?
-- How do we tell the story of a completed project?
-- Who handles media or partnership inquiries?
-- How do we communicate internally between projects?
+How do we turn each completed project into more trust, more interest, more participation, and the next project?
 
----
+## Roles and responsibilities
 
-## 6. Finances & Fundraising
+Who owns each part of the process, and what does each role need to do to keep the system moving?
 
-- How do we accept money? (Venmo, bank account, fiscal sponsor?)
-- What do we typically spend money on per project?
-- Are we pursuing grants? Which ones make sense in Baltimore?
-- How do we track in-kind donations (tools, materials, labor)?
-- Who is responsible for financial records?
+## Safety and boundaries
 
----
+What work are we willing to do, what work is out of bounds, and how do we protect volunteers, hosts, and the project itself?
 
-## 7. Tools We Use
+## Simple operating tools
 
-| Purpose | Tool | Notes |
-|---|---|---|
-| Project tracking | | |
-| Communication | | |
-| File storage | | |
-| Scheduling | | |
-| Social media | | |
-| Finance | | |
+What is the minimum set of tools we need to manage inquiries, planning, communication, execution, and follow-up?
 
----
+## Open questions
 
-*Last updated: March 2026*
+What important decisions are still unresolved, and what do we need to learn through pilots before locking anything in?
+
+## Current focus
+
+What are the most important things to build, test, or prove right now?
